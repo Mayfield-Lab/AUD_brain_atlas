@@ -1,1 +1,1 @@
-# AUD_brain_atlas
+# AUD brain atlas
