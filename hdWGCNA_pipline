@@ -292,4 +292,141 @@ ggboxplot(key, x = "DSMV", y = "`Ast-M1`", color = "DSMV", palette = "jco")+ sta
 #Tutorial for ggpubr here: http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/76-add-p-values-and-significance-levels-to-ggplots/
  
  
-#Go to downstream analyses for hdWGCNA script to see different processing from this point forward. 
+
+#Before we visualize anything, we first need to load the data and the required libraries.
+
+# single-cell analysis package
+library(Seurat)
+
+# plotting and data science packages
+library(tidyverse)
+library(cowplot)
+library(patchwork)
+
+# co-expression network analysis packages:
+library(WGCNA)
+library(hdWGCNA)
+
+# network analysis & visualization package:
+library(igraph)
+
+# using the cowplot theme for ggplot
+theme_set(theme_cowplot())
+
+#INDIVIDUAL MODULE NETWORK PLOTS 
+ModuleNetworkPlot(seurat_obj)
+
+#This will create pdfs for each module in a separate folder in your working directory, labeled "ModulePlots"
+
+#COMBINED HUB GENE NETWORKS PLOTS
+#Here we will make a network plot combining all of the modules together using the HubGeneNetworkPlot function. This function takes the top n hub genes as specified by the user, and other randomly selected genes, and constructs a joint network using the force-directed graph drawing algorithm. For visual clarity, the number of edges in the network can be downsampled using the edge_prop parameter. In the following example, we visualize the top 3 hub genes and 6 other genes per module.
+
+# hubgene network
+HubGeneNetworkPlot(
+  seurat_obj,
+  n_hubs = 3, n_other=5,
+  edge_prop = 0.75,
+  mods = 'all'
+)
+
+#As in the previous network plot, each node represents a gene and each edge represents a co-expression relationship. In this network, we color intramodular edges with the module’s color, and intermodular edges gray. The opacity of edges in this network is scaled by the strength of the co-expression relationship. Additional network layout settings can be passed to the layout_with_fr function in igraph. The user can also specify return_graph = TRUE to return the igraph object to plot using their own custom code.
+
+g <- HubGeneNetworkPlot(seurat_obj,  return_graph=TRUE)
+
+#Differential module eigengene analysis (DME) analysis 
+group1 <- seurat_obj@meta.data %>% subset(cell_type == 'Ast' & Classification == 'Control') %>% rownames
+group2 <- seurat_obj@meta.data %>% subset(cell_type == 'Ast' & Classification != 'Control') %>% rownames
+
+head(group1)
+
+DMEs <- FindDMEs(
+  seurat_obj,
+  barcodes1 = group1,
+  barcodes2 = group2,
+  test.use='wilcox',
+)
+
+head(DMEs)
+
+PlotDMEsVolcano(
+  seurat_obj,
+  DMEs,
+ )
+ 
+ #One-versus-all DME analysis
+ group.by = 'cell_type'
+
+DMEs_all <- FindAllDMEs(
+  seurat_obj,
+  group.by = 'cell_type',
+  )
+
+head(DMEs_all)
+
+p <- PlotDMEsVolcano(
+  seurat_obj,
+  DMEs_all,
+  plot_labels=FALSE,
+  show_cutoff=FALSE
+)
+
+# facet wrap by each cell type
+p + facet_wrap(~group, ncol=3)
+
+
+#Correlation Heatmap 
+seurat_obj$Sex <- as.factor(seurat_obj$Sex)
+seurat_obj$Liver_class <- as.factor(seurat_obj$Liver_class)
+seurat_obj$Smoking_frequency <- as.factor(seurat_obj$Smoking_frequency)
+seurat_obj$DSMV <- as.factor(seurat_obj$DSMV)
+seurat_obj$Classification <- as.factor(seurat_obj$Classification)
+
+cur_traits <- c('Sex', "Liver_class", "Classification", "Smoking_frequency", "DSMV", "alcohol_intake_gmsperday")
+
+#Warning messages:
+1: In ModuleTraitCorrelation(seurat_obj, traits = cur_traits, group.by = "cell_type") :
+  Trait Sex is a factor with levels Female, Male. Levels will be converted to numeric IN THIS ORDER for the correlation, is this the expected order?
+2: In ModuleTraitCorrelation(seurat_obj, traits = cur_traits, group.by = "cell_type") :
+  Trait Liver_class is a factor with levels Cirrhosis, Congestion, Mild Steatosis, Mild_Steatosis, Normal, Steatosis, unknown. Levels will be converted to numeric IN THIS ORDER for the correlation, is this the expected order?
+3: In ModuleTraitCorrelation(seurat_obj, traits = cur_traits, group.by = "cell_type") :
+  Trait Classification is a factor with levels AUD, Control. Levels will be converted to numeric IN THIS ORDER for the correlation, is this the expected order?
+4: In ModuleTraitCorrelation(seurat_obj, traits = cur_traits, group.by = "cell_type") :
+  Trait Smoking_frequency is a factor with levels 01 - Everyday/7days per week, 11 - Never  in the past year, 12 - Never in my life, 99 - Not reported. Levels will be converted to numeric IN THIS ORDER for the correlation, is this the expected order?
+5: In ModuleTraitCorrelation(seurat_obj, traits = cur_traits, group.by = "cell_type") :
+  Trait DSMV is a factor with levels Control, Mild, Moderate, Severe. Levels will be converted to numeric IN THIS ORDER for the correlation, is this the expected order?
+
+#Reorder levels
+seurat_obj$Sex <- factor(seurat_obj$Sex, levels = c("Male", "Female"))
+seurat_obj$DSMV <- factor(seurat_obj$DSMV, levels = c("Severe", "Moderate", "Mild", "Control"))
+seurat_obj$Liver_class <- factor(seurat_obj$Liver_class, levels = c("Cirrhosis", "Steatosis","Mild Steatosis", "Mild_Steatosis", "Congestion", "Normal", "unknown"))
+
+seurat_obj <- ModuleTraitCorrelation(
+    seurat_obj,
+    traits = cur_traits,    
+    group.by='cell_type'
+)
+
+# get the mt-correlation results
+mt_cor <- GetModuleTraitCorrelation(seurat_obj)
+
+names(mt_cor)
+
+names(mt_cor$cor)
+
+#Check the correlations for your cell type of interest 
+head(mt_cor$cor$Ast[,1:5])
+
+#Plot heatmap
+PlotModuleTraitCorrelation(
+  seurat_obj,
+  label = 'fdr',
+  label_symbol = 'stars',
+  text_size = 2,
+  text_digits = 2,
+  text_color = 'white',
+  high_color = 'red',
+  mid_color = 'white',
+  low_color = 'blue',
+  plot_max = 0.2,
+  combine=TRUE
+)
