@@ -31,7 +31,7 @@ BiocManager::install(c("edgeR", "DESeq2", "limma"), force=TRUE)
 devtools::install_github("neurorestore/Libra")
 
 #Read in the .rds file from the Seurat Pipeline that has all cell types labeled and has been integrated with Harmony
-pfc_human<-read.RDS("~/pfc_human_afterharmony.rds")
+pfc_human<-read.RDS(file="~/pfc_human_downstreamanalysis.rds")
 
 #Add a cell type column to pfc human and meta data
 pfc_human@meta.data$cell_type <- Idents(pfc_human)
