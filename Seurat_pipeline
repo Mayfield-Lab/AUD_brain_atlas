@@ -168,7 +168,7 @@ saveRDS(pfc_human, file="~/pfc_afterharmony.rds")
 pfc_markers <- FindAllMarkers(pfc_human, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
 pfc_markers %>% group_by(cluster) %>% top_n(n = 2, wt = avg_log2FC)
 write.csv(pfc_markers,file="~/cluster_markers.csv")
-saveRDS(pfc_human, file="~/pfc_human_afterclustering.rds")
+
 
 #Renaming clusters after cell type identification 
 new.cluster.ids<-c("Excit1", "Oligo1", "Neu1", "Oligo2", "Inhib1", "Ast1", "OPC1", "Inhib2", "MG1", "Excit2", "Inhib3", "Endo1", "Excit3", "VSMC", "Inhib4", "Ast2", "Oligo3", "MG2", "Ast/Oligo", "Peri", "Endo2", "Excit4", "Excit5", "Excit6", "Inhib5", "Ast/OPC", "Oligo4", "OPC2", "Oligo5","Inhib6")
@@ -226,3 +226,5 @@ celltype_by_AUD_ggplot<-as.data.frame(celltype_by_AUD)
 ggplot(data=celltype_by_AUD_ggplot,aes(x=Var1,y=Freq,fill=Var2))+geom_bar(stat="identity")+xlab("Sample")+ylab("proportion of cells")+geom_text(aes(label=round(Freq,2)),position = position_fill(vjust = 0.5))
 
 #This section ends with the seurat object ready for differential expression analysis, hdWGCNA, TF enrichment analysis and MAGMA analysis. 
+#This object will be loaded for all downstream analyses
+saveRDS(pfc_human, file="~/pfc_human_downstreamanalysis.rds")
