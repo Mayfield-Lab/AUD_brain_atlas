@@ -35,15 +35,7 @@ Libra is an R package to perform differential expression on single-cell data. Li
 The main function of Libra, run_de, takes as input a preprocessed features-by-cells (e.g., genes-by-cells for scRNA-seq) matrix, and a data frame containing metadata associated with each cell, minimally including the cell type annotations, replicates, and sample labels to be predicted. This means that in order to use Libra, you should have pre-processed your data (e.g., by read alignment and cell type assignment for scRNA-seq) across all experimental conditions.
 
 
-(4) Pseudobulking 
-
-Resource link (video): https://www.youtube.com/watch?v=04gB2owLKus
-Resource link: https://hbctraining.github.io/scRNA-seq/lessons/pseudobulk_DESeq2_scrnaseq.html
-
-This is a more conservative method sometimes used for pseudobulking. It will give a good benchmark for how lenient your Libra pseudobulking is comparatively, essentially which genes are consistent between these different correction methods. 
-
-
-(5) Pseudotime with monocle3
+(4) Pseudotime with monocle3
 
 Resource link: https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/
 
@@ -58,7 +50,7 @@ Monocle 3 can help you perform three main types of analysis:
 
 Specifically, Monocle introduced the strategy of using RNA-Seq for single-cell trajectory analysis. Rather than purifying cells into discrete states experimentally, Monocle uses an algorithm to learn the sequence of gene expression changes each cell must go through as part of a dynamic biological process. Once it has learned the overall "trajectory" of gene expression changes, Monocle can place each cell at its proper position in the trajectory. You can then use Monocle's differential analysis toolkit to find genes regulated over the course of the trajectory, as described in the section Finding genes that change as a function of pseudotime . If there are multiple outcomes for the process, Monocle will reconstruct a "branched" trajectory. These branches correspond to cellular "decisions", and Monocle provides powerful tools for identifying the genes affected by them and involved in making them. You can see how to analyze branches in the section Analyzing branches in single-cell trajectories.
 
-(6) RNA velocity 
+(5) RNA velocity 
 
 Resource link: https://github.com/velocyto-team/velocyto.R
 
