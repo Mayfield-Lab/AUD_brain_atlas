@@ -6,7 +6,7 @@ install.packages("hdf5r")
 library(hdf5r)
 
 #Sample 1
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1000_GEX_Sample_303")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1000_GEX_Sample_303")
 filt.matrix_1000_GEX_Sample_303<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1000_GEX_Sample_303<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1000_GEX_Sample_303)
@@ -36,7 +36,7 @@ head(soup.channel_1000_GEX_Sample_303$soupProfile[order(soup.channel_1000_GEX_Sa
 out_1000_GEX_Sample_303 = adjustCounts(soup.channel_1000_GEX_Sample_303)
 
 #Sample 2
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1002_GEX_Sample_351")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1002_GEX_Sample_351")
 filt.matrix_1002_GEX_Sample_351<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1002_GEX_Sample_351<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1002_GEX_Sample_351)
@@ -66,7 +66,7 @@ head(soup.channel_1002_GEX_Sample_351$soupProfile[order(soup.channel_1002_GEX_Sa
 out_1002_GEX_Sample_351 = adjustCounts(soup.channel_1002_GEX_Sample_351)
 
 #Sample 3
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1003_GEX_Sample_366")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1003_GEX_Sample_366")
 filt.matrix_1003_GEX_Sample_366<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1003_GEX_Sample_366<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1003_GEX_Sample_366)
@@ -97,7 +97,7 @@ out_1003_GEX_Sample_366 = adjustCounts(soup.channel_1003_GEX_Sample_366)
 
 
 #Sample 4
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1155_GEX_Sample_586")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1155_GEX_Sample_586")
 filt.matrix_1155_GEX_Sample_586<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1155_GEX_Sample_586<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1155_GEX_Sample_586)
@@ -127,7 +127,7 @@ head(soup.channel_1155_GEX_Sample_586$soupProfile[order(soup.channel_1155_GEX_Sa
 out_1155_GEX_Sample_586 = adjustCounts(soup.channel_1155_GEX_Sample_586)
 
 #Sample 5
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1156_GEX_Sample_339")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1156_GEX_Sample_339")
 filt.matrix_1156_GEX_Sample_339<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1156_GEX_Sample_339<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1156_GEX_Sample_339)
@@ -158,7 +158,7 @@ out_1156_GEX_Sample_339 = adjustCounts(soup.channel_1156_GEX_Sample_339)
 
 #Sample 6
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1157_GEX_Sample_236")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1157_GEX_Sample_236")
 filt.matrix_1157_GEX_Sample_236<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1157_GEX_Sample_236<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1157_GEX_Sample_236)
@@ -188,7 +188,7 @@ head(soup.channel_1157_GEX_Sample_236$soupProfile[order(soup.channel_1157_GEX_Sa
 out_1157_GEX_Sample_236 = adjustCounts(soup.channel_1157_GEX_Sample_236)
 
 #Sample 7
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1158_GEX_Sample_278")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1158_GEX_Sample_278")
 filt.matrix_1158_GEX_Sample_278<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1158_GEX_Sample_278<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1158_GEX_Sample_278)
@@ -218,7 +218,7 @@ head(soup.channel_1158_GEX_Sample_278$soupProfile[order(soup.channel_1158_GEX_Sa
 out_1158_GEX_Sample_278 = adjustCounts(soup.channel_1158_GEX_Sample_278)
 
 #Sample 8
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1159_GEX_Sample_642")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1159_GEX_Sample_642")
 filt.matrix_1159_GEX_Sample_642<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1159_GEX_Sample_642<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1159_GEX_Sample_642)
@@ -248,7 +248,7 @@ head(soup.channel_1159_GEX_Sample_642$soupProfile[order(soup.channel_1159_GEX_Sa
 out_1159_GEX_Sample_642 = adjustCounts(soup.channel_1159_GEX_Sample_642)
 
 #Sample 9
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1160_GEX_Sample_723")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1160_GEX_Sample_723")
 filt.matrix_1160_GEX_Sample_723<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1160_GEX_Sample_723<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1160_GEX_Sample_723)
@@ -278,7 +278,7 @@ head(soup.channel_1160_GEX_Sample_723$soupProfile[order(soup.channel_1160_GEX_Sa
 out_1160_GEX_Sample_723 = adjustCounts(soup.channel_1160_GEX_Sample_723)
 
 #Sample 10
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1161_GEX_Sample_401")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/1161_GEX_Sample_401")
 filt.matrix_1161_GEX_Sample_401<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_1161_GEX_Sample_401<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_1161_GEX_Sample_401)
@@ -333,7 +333,7 @@ out_575 = adjustCounts(soup.channel_575)
 
 #Sample 12
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/893_3GEX_Sample_813_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/893_3GEX_Sample_813_nuclei")
 filt.matrix_893_3GEX_Sample_813_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_893_3GEX_Sample_813_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_893_3GEX_Sample_813_nuclei)
@@ -364,7 +364,7 @@ out_893_3GEX_Sample_813_nuclei = adjustCounts(soup.channel_893_3GEX_Sample_813_n
 
 #Sample 13
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/894_3GEX_Sample_814_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/894_3GEX_Sample_814_nuclei")
 filt.matrix_894_3GEX_Sample_814_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_894_3GEX_Sample_814_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_894_3GEX_Sample_814_nuclei)
@@ -394,7 +394,7 @@ head(soup.channel_894_3GEX_Sample_814_nuclei$soupProfile[order(soup.channel_894_
 out_894_3GEX_Sample_814_nuclei = adjustCounts(soup.channel_894_3GEX_Sample_814_nuclei)
 
 #Sample 14
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/895_3GEX_Sample_821_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/895_3GEX_Sample_821_nuclei")
 filt.matrix_895_3GEX_Sample_821_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_895_3GEX_Sample_821_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_895_3GEX_Sample_821_nuclei)
@@ -425,7 +425,7 @@ out_895_3GEX_Sample_821_nuclei = adjustCounts(soup.channel_895_3GEX_Sample_821_n
 
 #Sample 15
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/896_3GEX_Sample_825_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/896_3GEX_Sample_825_nuclei")
 filt.matrix_896_3GEX_Sample_825_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_896_3GEX_Sample_825_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_896_3GEX_Sample_825_nuclei)
@@ -455,7 +455,7 @@ head(soup.channel_896_3GEX_Sample_825_nuclei$soupProfile[order(soup.channel_896_
 out_896_3GEX_Sample_825_nuclei = adjustCounts(soup.channel_896_3GEX_Sample_825_nuclei)
 
 #Sample 16
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/898_3GEX_Sample_6992_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/898_3GEX_Sample_6992_nuclei")
 filt.matrix_898_3GEX_Sample_6992_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_898_3GEX_Sample_6992_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_898_3GEX_Sample_6992_nuclei)
@@ -485,7 +485,7 @@ head(soup.channel_898_3GEX_Sample_6992_nuclei$soupProfile[order(soup.channel_898
 out_898_3GEX_Sample_6992_nuclei = adjustCounts(soup.channel_898_3GEX_Sample_6992_nuclei)
 
 #Sample 17
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/899_3GEX_Sample_6996_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/899_3GEX_Sample_6996_nuclei")
 filt.matrix_899_3GEX_Sample_6996_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_899_3GEX_Sample_6996_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_899_3GEX_Sample_6996_nuclei)
@@ -516,7 +516,7 @@ out_899_3GEX_Sample_6996_nuclei = adjustCounts(soup.channel_899_3GEX_Sample_6996
 
 #Sample 18
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/900_3GEX_Sample_7000_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/900_3GEX_Sample_7000_nuclei")
 filt.matrix_900_3GEX_Sample_7000_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_900_3GEX_Sample_7000_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_900_3GEX_Sample_7000_nuclei)
@@ -546,7 +546,7 @@ head(soup.channel_900_3GEX_Sample_7000_nuclei$soupProfile[order(soup.channel_900
 out_900_3GEX_Sample_7000_nuclei = adjustCounts(soup.channel_900_3GEX_Sample_7000_nuclei)
 
 #Sample 19
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/919_3GEX_Sample_6979_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/919_3GEX_Sample_6979_nuclei")
 filt.matrix_919_3GEX_Sample_6979_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_919_3GEX_Sample_6979_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_919_3GEX_Sample_6979_nuclei)
@@ -576,7 +576,7 @@ head(soup.channel_919_3GEX_Sample_6979_nuclei$soupProfile[order(soup.channel_919
 out_919_3GEX_Sample_6979_nuclei = adjustCounts(soup.channel_919_3GEX_Sample_6979_nuclei)
 
 #Sample 20
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/920_3GEX_Sample_6980_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/920_3GEX_Sample_6980_nuclei")
 filt.matrix_920_3GEX_Sample_6980_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_920_3GEX_Sample_6980_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_920_3GEX_Sample_6980_nuclei)
@@ -608,7 +608,7 @@ out_920_3GEX_Sample_6980_nuclei = adjustCounts(soup.channel_920_3GEX_Sample_6980
 
 #Sample 21
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/921_3GEX_Sample_6984_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/921_3GEX_Sample_6984_nuclei")
 filt.matrix_921_3GEX_Sample_6984_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_921_3GEX_Sample_6984_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_921_3GEX_Sample_6984_nuclei)
@@ -639,7 +639,7 @@ out_921_3GEX_Sample_6984_nuclei = adjustCounts(soup.channel_921_3GEX_Sample_6984
 
 #Sample 22
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/922_3GEX_Sample_6986_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/922_3GEX_Sample_6986_nuclei")
 filt.matrix_922_3GEX_Sample_6986_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_922_3GEX_Sample_6986_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_922_3GEX_Sample_6986_nuclei)
@@ -670,7 +670,7 @@ out_922_3GEX_Sample_6986_nuclei = adjustCounts(soup.channel_922_3GEX_Sample_6986
 
 #Sample 23
 #Sample 2
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/923_3GEX_Sample_6987_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/923_3GEX_Sample_6987_nuclei")
 filt.matrix_923_3GEX_Sample_6987_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_923_3GEX_Sample_6987_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_923_3GEX_Sample_6987_nuclei)
@@ -701,7 +701,7 @@ out_923_3GEX_Sample_6987_nuclei = adjustCounts(soup.channel_923_3GEX_Sample_6987
 
 #Sample 24
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/924_3GEX_Sample_6988_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/924_3GEX_Sample_6988_nuclei")
 filt.matrix_924_3GEX_Sample_6988_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_924_3GEX_Sample_6988_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_924_3GEX_Sample_6988_nuclei)
@@ -732,7 +732,7 @@ out_924_3GEX_Sample_6988_nuclei = adjustCounts(soup.channel_924_3GEX_Sample_6988
 
 #Sample 25
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/925_3GEX_Sample_6989_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/925_3GEX_Sample_6989_nuclei")
 filt.matrix_925_3GEX_Sample_6989_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_925_3GEX_Sample_6989_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_925_3GEX_Sample_6989_nuclei)
@@ -763,7 +763,7 @@ out_925_3GEX_Sample_6989_nuclei = adjustCounts(soup.channel_925_3GEX_Sample_6989
 
 #Sample 26
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/938_3GEX_Sample_620_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/938_3GEX_Sample_620_nuclei")
 filt.matrix_938_3GEX_Sample_620_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_938_3GEX_Sample_620_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_938_3GEX_Sample_620_nuclei)
@@ -794,7 +794,7 @@ out_938_3GEX_Sample_620_nuclei = adjustCounts(soup.channel_938_3GEX_Sample_620_n
 
 #Sample 27
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/940_3GEX_Sample_663C_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/940_3GEX_Sample_663C_nuclei")
 filt.matrix_940_3GEX_Sample_663C_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_940_3GEX_Sample_663C_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_940_3GEX_Sample_663C_nuclei)
@@ -825,7 +825,7 @@ out_940_3GEX_Sample_663C_nuclei = adjustCounts(soup.channel_940_3GEX_Sample_663C
 
 #Sample 28
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/942_3GEX_Sample_635_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/942_3GEX_Sample_635_nuclei")
 filt.matrix_942_3GEX_Sample_635_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_942_3GEX_Sample_635_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_942_3GEX_Sample_635_nuclei)
@@ -856,7 +856,7 @@ out_942_3GEX_Sample_635_nuclei = adjustCounts(soup.channel_942_3GEX_Sample_635_n
 
 #Sample 29
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/943_3GEX_Sample_646_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/943_3GEX_Sample_646_nuclei")
 filt.matrix_943_3GEX_Sample_646_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_943_3GEX_Sample_646_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_943_3GEX_Sample_646_nuclei)
@@ -887,7 +887,7 @@ out_943_3GEX_Sample_646_nuclei = adjustCounts(soup.channel_943_3GEX_Sample_646_n
 
 #Sample 30
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/944_3GEX_Sample_650_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/944_3GEX_Sample_650_nuclei")
 filt.matrix_944_3GEX_Sample_650_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_944_3GEX_Sample_650_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_944_3GEX_Sample_650_nuclei)
@@ -918,7 +918,7 @@ out_944_3GEX_Sample_650_nuclei = adjustCounts(soup.channel_944_3GEX_Sample_650_n
 
 #Sample 31
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/945_3GEX_Sample_693_nuclei")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/945_3GEX_Sample_693_nuclei")
 filt.matrix_945_3GEX_Sample_693_nuclei<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_945_3GEX_Sample_693_nuclei<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_945_3GEX_Sample_693_nuclei)
@@ -949,7 +949,7 @@ out_945_3GEX_Sample_693_nuclei = adjustCounts(soup.channel_945_3GEX_Sample_693_n
 
 #Sample 32
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/947_GEX_Sample_180")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/947_GEX_Sample_180")
 filt.matrix_947_GEX_Sample_180<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_947_GEX_Sample_180<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_947_GEX_Sample_180)
@@ -980,7 +980,7 @@ out_947_GEX_Sample_180 = adjustCounts(soup.channel_947_GEX_Sample_180)
 
 #Sample 33
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/948_GEX_Sample_656")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/948_GEX_Sample_656")
 filt.matrix_948_GEX_Sample_656<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_948_GEX_Sample_656<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_948_GEX_Sample_656)
@@ -1011,7 +1011,7 @@ out_948_GEX_Sample_656 = adjustCounts(soup.channel_948_GEX_Sample_656)
 
 #Sample 34
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/949_GEX_Sample_688")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/949_GEX_Sample_688")
 filt.matrix_949_GEX_Sample_688<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_949_GEX_Sample_688<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_949_GEX_Sample_688)
@@ -1042,7 +1042,7 @@ out_949_GEX_Sample_688 = adjustCounts(soup.channel_949_GEX_Sample_688)
 
 #Sample 35
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/950_GEX_Sample_700")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/950_GEX_Sample_700")
 filt.matrix_950_GEX_Sample_700<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_950_GEX_Sample_700<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_950_GEX_Sample_700)
@@ -1073,7 +1073,7 @@ out_950_GEX_Sample_700 = adjustCounts(soup.channel_950_GEX_Sample_700)
 
 #Sample 36
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/951_GEX_Sample_97")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/951_GEX_Sample_97")
 filt.matrix_951_GEX_Sample_97<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_951_GEX_Sample_97<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_951_GEX_Sample_97)
@@ -1104,7 +1104,7 @@ out_951_GEX_Sample_97 = adjustCounts(soup.channel_951_GEX_Sample_97)
 
 #Sample 37
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/952_GEX_Sample_182")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/952_GEX_Sample_182")
 filt.matrix_952_GEX_Sample_182<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_952_GEX_Sample_182<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_952_GEX_Sample_182)
@@ -1135,7 +1135,7 @@ out_952_GEX_Sample_182 = adjustCounts(soup.channel_952_GEX_Sample_182)
 
 #Sample 38
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/953_GEX_Sample_243")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/953_GEX_Sample_243")
 filt.matrix_953_GEX_Sample_243<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_953_GEX_Sample_243<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_953_GEX_Sample_243)
@@ -1166,7 +1166,7 @@ out_953_GEX_Sample_243 = adjustCounts(soup.channel_953_GEX_Sample_243)
 
 #Sample 39
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/954_GEX_Sample_727")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/954_GEX_Sample_727")
 filt.matrix_954_GEX_Sample_727<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_954_GEX_Sample_727<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_954_GEX_Sample_727)
@@ -1197,7 +1197,7 @@ out_954_GEX_Sample_727 = adjustCounts(soup.channel_954_GEX_Sample_727)
 
 #Sample 40
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/980_GEX_Sample_192")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/980_GEX_Sample_192")
 filt.matrix_980_GEX_Sample_192<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_980_GEX_Sample_192<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_980_GEX_Sample_192)
@@ -1228,7 +1228,7 @@ out_980_GEX_Sample_192 = adjustCounts(soup.channel_980_GEX_Sample_192)
 
 #Sample 41
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/981_GEX_Sample_228")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/981_GEX_Sample_228")
 filt.matrix_981_GEX_Sample_228<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_981_GEX_Sample_228<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_981_GEX_Sample_228)
@@ -1259,7 +1259,7 @@ out_981_GEX_Sample_228 = adjustCounts(soup.channel_981_GEX_Sample_228)
 
 #Sample 42
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/984_GEX_Sample_209")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/984_GEX_Sample_209")
 filt.matrix_984_GEX_Sample_209<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_984_GEX_Sample_209<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_984_GEX_Sample_209)
@@ -1290,7 +1290,7 @@ out_984_GEX_Sample_209 = adjustCounts(soup.channel_984_GEX_Sample_209)
 
 #Sample 43
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/985_GEX_Sample_234")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/985_GEX_Sample_234")
 filt.matrix_985_GEX_Sample_234<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_985_GEX_Sample_234<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_985_GEX_Sample_234)
@@ -1321,7 +1321,7 @@ out_985_GEX_Sample_234 = adjustCounts(soup.channel_985_GEX_Sample_234)
 
 #Sample 44
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/986_GEX_Sample_252")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/986_GEX_Sample_252")
 filt.matrix_986_GEX_Sample_252<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_986_GEX_Sample_252<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_986_GEX_Sample_252)
@@ -1352,7 +1352,7 @@ out_986_GEX_Sample_252 = adjustCounts(soup.channel_986_GEX_Sample_252)
 
 #Sample 45
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/987_GEX_Sample_253")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/987_GEX_Sample_253")
 filt.matrix_987_GEX_Sample_253<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_987_GEX_Sample_253<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_987_GEX_Sample_253)
@@ -1383,7 +1383,7 @@ out_987_GEX_Sample_253 = adjustCounts(soup.channel_987_GEX_Sample_253)
 
 #Sample 46
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/996_GEX_Sample_315")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/996_GEX_Sample_315")
 filt.matrix_996_GEX_Sample_315<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_996_GEX_Sample_315<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_996_GEX_Sample_315)
@@ -1414,7 +1414,7 @@ out_996_GEX_Sample_315 = adjustCounts(soup.channel_996_GEX_Sample_315)
 
 #Sample 47
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/997_GEX_Sample_330")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/997_GEX_Sample_330")
 filt.matrix_997_GEX_Sample_330<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_997_GEX_Sample_330<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_997_GEX_Sample_330)
@@ -1445,7 +1445,7 @@ out_997_GEX_Sample_330 = adjustCounts(soup.channel_997_GEX_Sample_330)
 
 #Sample 48
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/998_GEX_Sample_332")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/998_GEX_Sample_332")
 filt.matrix_998_GEX_Sample_332<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_998_GEX_Sample_332<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_998_GEX_Sample_332)
@@ -1476,7 +1476,7 @@ out_998_GEX_Sample_332 = adjustCounts(soup.channel_998_GEX_Sample_332)
 
 #Sample 49
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/999_GEX_Sample_367")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/999_GEX_Sample_367")
 filt.matrix_999_GEX_Sample_367<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_999_GEX_Sample_367<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_999_GEX_Sample_367)
@@ -1507,7 +1507,7 @@ out_999_GEX_Sample_367 = adjustCounts(soup.channel_999_GEX_Sample_367)
 
 #Sample 50
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_01_286")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_01_286")
 filt.matrix_Alcohol_01_286<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_01_286<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_01_286)
@@ -1538,7 +1538,7 @@ out_Alcohol_01_286 = adjustCounts(soup.channel_Alcohol_01_286)
 
 #Sample 51
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_02_508")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_02_508")
 filt.matrix_Alcohol_02_508<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_02_508<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_02_508)
@@ -1569,7 +1569,7 @@ out_Alcohol_02_508 = adjustCounts(soup.channel_Alcohol_02_508)
 
 #Sample 52
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_05_652 ")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_05_652 ")
 filt.matrix_Alcohol_05_652 <-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_05_652 <-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_05_652)
@@ -1600,7 +1600,7 @@ out_Alcohol_05_652 = adjustCounts(soup.channel_Alcohol_05_652)
 
 #Sample 53
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_06_695 ")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_06_695 ")
 filt.matrix_Alcohol_06_695 <-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_06_695 <-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_06_695)
@@ -1631,7 +1631,7 @@ out_Alcohol_06_695 = adjustCounts(soup.channel_Alcohol_06_695)
 
 #Sample 54
 
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_11_767 ")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_11_767 ")
 filt.matrix_Alcohol_11_767 <-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_11_767 <-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_11_767)
@@ -1661,7 +1661,7 @@ head(soup.channel_Alcohol_11_767 $soupProfile[order(soup.channel_Alcohol_11_767$
 out_Alcohol_11_767 = adjustCounts(soup.channel_Alcohol_11_767)
 
 #Sample 55
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_16_800")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_16_800")
 filt.matrix_Alcohol_16_800<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_16_800<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_16_800)
@@ -1691,7 +1691,7 @@ head(soup.channel_Alcohol_16_800$soupProfile[order(soup.channel_Alcohol_16_800$s
 out_Alcohol_16_800 = adjustCounts(soup.channel_Alcohol_16_800)
 
 #Sample 56
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_17_810")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_17_810")
 filt.matrix_Alcohol_17_810<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_17_810<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_17_810)
@@ -1721,7 +1721,7 @@ head(soup.channel_Alcohol_17_810$soupProfile[order(soup.channel_Alcohol_17_810$s
 out_Alcohol_17_810 = adjustCounts(soup.channel_Alcohol_17_810)
 
 #Sample 57
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_18_813")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_18_813")
 filt.matrix_Alcohol_18_813<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_18_813<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_18_813)
@@ -1751,7 +1751,7 @@ head(soup.channel_Alcohol_18_813$soupProfile[order(soup.channel_Alcohol_18_813$s
 out_Alcohol_18_813 = adjustCounts(soup.channel_Alcohol_18_813)
 
 #Sample 58
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_19_833")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_19_833")
 filt.matrix_Alcohol_19_833<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_19_833<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_19_833)
@@ -1781,7 +1781,7 @@ head(soup.channel_Alcohol_19_833$soupProfile[order(soup.channel_Alcohol_19_833$s
 out_Alcohol_19_833 = adjustCounts(soup.channel_Alcohol_19_833)
 
 #Sample 59
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_21_850")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_21_850")
 filt.matrix_Alcohol_21_850<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_21_850<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_21_850)
@@ -1811,7 +1811,7 @@ head(soup.channel_Alcohol_21_850$soupProfile[order(soup.channel_Alcohol_21_850$s
 out_Alcohol_21_850 = adjustCounts(soup.channel_Alcohol_21_850)
 
 #Sample 60
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_24_861")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Alcohol_24_861")
 filt.matrix_Alcohol_24_861<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Alcohol_24_861<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Alcohol_24_861)
@@ -1841,7 +1841,7 @@ head(soup.channel_Alcohol_24_861$soupProfile[order(soup.channel_Alcohol_24_861$s
 out_Alcohol_24_861 = adjustCounts(soup.channel_Alcohol_24_861)
 
 #Sample 61
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_02_353")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_02_353")
 filt.matrix_Control_02_353<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_02_353<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_02_353)
@@ -1871,7 +1871,7 @@ head(soup.channel_Control_02_353$soupProfile[order(soup.channel_Control_02_353$s
 out_Control_02_353 = adjustCounts(soup.channel_Control_02_353)
 
 #Sample 62
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_04_453")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_04_453")
 filt.matrix_Control_04_453<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_04_453<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_04_453)
@@ -1901,7 +1901,7 @@ head(soup.channel_Control_04_453$soupProfile[order(soup.channel_Control_04_453$s
 out_Control_04_453 = adjustCounts(soup.channel_Control_04_453)
 
 #Sample 63
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_05_469")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_05_469")
 filt.matrix_Control_05_469<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_05_469<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_05_469)
@@ -1931,7 +1931,7 @@ head(soup.channel_Control_05_469$soupProfile[order(soup.channel_Control_05_469$s
 out_Control_05_469 = adjustCounts(soup.channel_Control_05_469)
 
 #Sample 64
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_06_498")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_06_498")
 filt.matrix_Control_06_498<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_06_498<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_06_498)
@@ -1961,7 +1961,7 @@ head(soup.channel_Control_06_498$soupProfile[order(soup.channel_Control_06_498$s
 out_Control_06_498 = adjustCounts(soup.channel_Control_06_498)
 
 #Sample 65
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_08_644")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_08_644")
 filt.matrix_Control_08_644<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_08_644<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_08_644)
@@ -1991,7 +1991,7 @@ head(soup.channel_Control_08_644$soupProfile[order(soup.channel_Control_08_644$s
 out_Control_08_644 = adjustCounts(soup.channel_Control_08_644)
 
 #Sample 66
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_09_647")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_09_647")
 filt.matrix_Control_09_647<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_09_647<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_09_647)
@@ -2021,7 +2021,7 @@ head(soup.channel_Control_09_647$soupProfile[order(soup.channel_Control_09_647$s
 out_Control_09_647 = adjustCounts(soup.channel_Control_09_647)
 
 #Sample 67
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_11_692")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_11_692")
 filt.matrix_Control_11_692<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_11_692<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_11_692)
@@ -2051,7 +2051,7 @@ head(soup.channel_Control_11_692$soupProfile[order(soup.channel_Control_11_692$s
 out_Control_11_692 = adjustCounts(soup.channel_Control_11_692)
 
 #Sample 68
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_13_734")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_13_734")
 filt.matrix_Control_13_734<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_13_734<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_13_734)
@@ -2081,7 +2081,7 @@ head(soup.channel_Control_13_734$soupProfile[order(soup.channel_Control_13_734$s
 out_Control_13_734 = adjustCounts(soup.channel_Control_13_734)
 
 #Sample 69
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_16_770")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_16_770")
 filt.matrix_Control_16_770<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_16_770<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_16_770)
@@ -2111,7 +2111,7 @@ head(soup.channel_Control_16_770$soupProfile[order(soup.channel_Control_16_770$s
 out_Control_16_770 = adjustCounts(soup.channel_Control_16_770)
 
 #Sample 70
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_18_793")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_18_793")
 filt.matrix_Control_18_793<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_18_793<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_18_793)
@@ -2141,7 +2141,7 @@ head(soup.channel_Control_18_793$soupProfile[order(soup.channel_Control_18_793$s
 out_Control_18_793 = adjustCounts(soup.channel_Control_18_793)
 
 #Sample 71
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_19_811")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_19_811")
 filt.matrix_Control_19_811<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_19_811<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_19_811)
@@ -2171,7 +2171,7 @@ head(soup.channel_Control_19_811$soupProfile[order(soup.channel_Control_19_811$s
 out_Control_19_811 = adjustCounts(soup.channel_Control_19_811)
 
 #Sample 72
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_20_830")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/Control_20_830")
 filt.matrix_Control_20_830<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_Control_20_830<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_Control_20_830)
@@ -2201,7 +2201,7 @@ head(soup.channel_Control_20_830$soupProfile[order(soup.channel_Control_20_830$s
 
 out_Control_20_830 = adjustCounts(soup.channel_Control_20_830)
 #Sample 73
-setwd("/stor/scratch/WCAAR/AnnaWarden_scratch/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/983_GEX_Sample_295")
+setwd("/path/to/file/human_dPFC_snRNAseq_2022/human_dPFC_snRNAseq_2022/outs_files/983_GEX_Sample_295")
 filt.matrix_983_GEX_Sample_295<-Read10X_h5("filtered_feature_bc_matrix.h5", use.names=T)
 raw.matrix_983_GEX_Sample_295<-Read10X_h5("raw_feature_bc_matrix.h5", use.names=T)
 str(raw.matrix_983_GEX_Sample_295)
