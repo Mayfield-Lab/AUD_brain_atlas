@@ -7,7 +7,7 @@ tar -xzvf cellranger-7.0.1.tar.gz
 tar -xzvf refdata-gex-GRCh38-2020-A.tar.gz
 gunzip *.gz 
 
-#Download or copy reference mask file stored in this POD location /stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/refdata-cellranger-GRCh38-1.2.0/genes/hg38_rmsk.gtf
+#Download or copy reference mask file stored in  POD location /path/to/file/hg38_rmsk.gtf
 
 #Now you need to import velocyto, see https://velocyto.org/velocyto.py/install/index.html 
 
@@ -18,7 +18,7 @@ conda install numpy scipy cython numba matplotlib scikit-learn h5py click
 pip install velocyto
 
 #Once everything is installed, in each of your cell ranger output folders, which contain the processed bam files and the outs folder, you will run the following code. In this case the sample being processed in Alcohol_01.
-velocyto run10x -m /stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/refdata-cellranger-GRCh38-1.2.0/genes/hg38_rmsk.gtf /stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/Alcohol_01/ /stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/refdata-cellranger-GRCh38-1.2.0/genes/genes.gtf
+velocyto run10x -m /path/to/file/refdata-cellranger-GRCh38-1.2.0/genes/hg38_rmsk.gtf /path/to/file/Alcohol_01/ /path/to/file/cell_ranger/refdata-cellranger-GRCh38-1.2.0/genes/genes.gtf
 
 #This will take 3-6 hours per sample. Run this code in each sample folder. At the end you will have a velocyto folder in each sample directory and contained within each velocyto folder will be a .loom file. 
 
@@ -38,53 +38,32 @@ import pandas as pd
 import random
 
 #bash
-find /stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/-name '*loom'
-#'stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_01.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_02.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_05.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_06.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_11.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_16.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_17.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_18.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_19.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_21.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_24.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_02.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_04.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_05.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_06.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_08.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_11.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_13.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_16.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_18.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_19.loom'
-#'/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_20.loom'
+find /path/to/file/cell_ranger/-name '*loom'
+
 
 #Now you need to merge them 
-w1='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_01.loom'
-w2='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_02.loom'
-w3='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_05.loom'
-w4='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_06.loom'
-w5='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_11.loom'
-w6='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_16.loom'
-w7='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_17.loom'
-w8='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_18.loom'
-w9='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_19.loom'
-w10='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_21.loom'
-w11='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Alcohol_24.loom'
-w12='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_02.loom'
-w13='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_04.loom'
-w14='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_05.loom'
-w15='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_06.loom'
-w16='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_08.loom'
-w17='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_11.loom'
-w18='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_13.loom'
-w19='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_16.loom'
-w20='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_18.loom'
-w21='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_19.loom'
-w22='/stor/scratch/WCAAR/AnnaWarden_scratch/cell_ranger/loom_files/Control_20.loom'
+w1='/path/cell_ranger/loom_files/Alcohol_01.loom'
+w2='/path/cell_ranger/loom_files/Alcohol_02.loom'
+w3='/path/cell_ranger/loom_files/Alcohol_05.loom'
+w4='/path/cell_ranger/loom_files/Alcohol_06.loom'
+w5='/path/cell_ranger/loom_files/Alcohol_11.loom'
+w6='/path/cell_ranger/loom_files/Alcohol_16.loom'
+w7='/path/cell_ranger/loom_files/Alcohol_17.loom'
+w8='/path/cell_ranger/loom_files/Alcohol_18.loom'
+w9='/path/cell_ranger/loom_files/Alcohol_19.loom'
+w10='/path/cell_ranger/loom_files/Alcohol_21.loom'
+w11='/path/cell_ranger/loom_files/Alcohol_24.loom'
+w12='/path/cell_ranger/loom_files/Control_02.loom'
+w13='/path/cell_ranger/loom_files/Control_04.loom'
+w14='/path/cell_ranger/loom_files/Control_05.loom'
+w15='/path/cell_ranger/loom_files/Control_06.loom'
+w16='/path/cell_ranger/loom_files/Control_08.loom'
+w17='/path/cell_ranger/loom_files/Control_11.loom'
+w18='/path/cell_ranger/loom_files/Control_13.loom'
+w19='/path/cell_ranger/loom_files/Control_16.loom'
+w20='/path/cell_ranger/loom_files/Control_18.loom'
+w21='/path/cell_ranger/loom_files/Control_19.loom'
+w22='//path/cell_ranger/loom_files/Control_20.loom'
 
 loompy.combine([w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,w14,w15,w16,w17,w18,w19,w20,w21,w22], output_file='merge_UT_samples.loom')
 
